@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css';
+import ApiData from "./components/ApiData";
 
 // Import your components here
 // import Button from './components/Button';
@@ -52,7 +53,7 @@ function App() {
         <div className="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow rounded-lg p-6">
           <h2 className="text-2xl font-bold mb-4">API Data</h2>
           <p className="text-gray-500 dark:text-gray-400">
-            Fetch and display data from an API here
+          <ApiData />
           </p>
         </div>
       </main>

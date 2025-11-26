@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import Button from './Button';
+import { ThemeContext } from './context/ThemeContext';
 
 /**
  * Custom hook for managing tasks with localStorage persistence
@@ -47,6 +48,12 @@ const useLocalStorageTasks = () => {
 
   return { tasks, addTask, toggleTask, deleteTask };
 };
+
+const { theme, toggleTheme } = useContext(ThemeContext);
+
+<Button variant="secondary" onClick={toggleTheme} className="mb-4">
+  Switch to {theme === "light" ? "Dark" : "Light"} Mode
+</Button>
 
 /**
  * TaskManager component for managing tasks
